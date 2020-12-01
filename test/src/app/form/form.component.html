@@ -1,0 +1,15 @@
+<form [formGroup]="myForm" (ngSubmit)="onSubmit()">
+  <div formArrayName="arr" *ngFor="let a of myForm.get('arr').controls; let i = index">
+    <div [formGroupName]="i" style="margin-bottom: 10px;">
+      <label for="phonenumber">PhoneNo:</label>
+      <input type="text" name="phonenumber_{{i}}" formControlName="phonenumber">
+      <input *ngIf="i!=0" type="button" name="deletebutton" value="{{i}}" (click)="removeAddress(i)" formControlName="deletebutton"/>
+      <br><br>
+      <label for="pay">Pay:</label>
+      <input type="text" name="pay" formControlName="pay">
+    </div>
+  </div>
+  <br>
+  <button type="button" (click)="addItem()" style="margin-right: 5px;">Add</button>
+  <button type="submit">Submit</button>
+</form>

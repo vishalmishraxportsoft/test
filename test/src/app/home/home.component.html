@@ -1,0 +1,15 @@
+<p>home works!</p>
+<div style="border:dashed; height:100px; width:100px; margin-left:0px;"><p><app-one [item]="currentItem"></app-one></p></div>
+<div style="border:dashed; height:100px; width:100px; margin-left:1000px; margin-top:-110px;"><p><app-two [item]="currentItem"></app-two></p></div>
+<div style=" margin-top: 240px; margin-left: 500px;"> <input [(ngModel)]="currentItem" (change)="somethingChanged($event)"></div>
+<div style="border:dashed; height:100px; width:100px; margin-top:250px; margin-left:0px;"><p><app-three [item]="currentItem"></app-three></p></div>
+<div style="border:dashed; height:100px; width:100px; margin-top:-106px; margin-left:1000px;"><p><app-four [item]="currentItem"></app-four></p></div>
+
+  <button type="button" routerLink="/form" style="margin-right: 5px;">Form</button>
+
+  <button type="button" routerLink="/numbers" style="margin-right: 5px;">Numbers</button>
+
+  <button type="button" routerLink="/nested" style="margin-right: 5px;">Nested</button>
+
+ 
+ 
